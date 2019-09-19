@@ -22,9 +22,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
       .pad-left {
         margin-left: 10px;
       }
-      .well div {
-        color:red;
-      }
+      
     `
   ]
 })
