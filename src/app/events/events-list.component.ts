@@ -5,7 +5,11 @@ import { Component } from "@angular/core";
     <div>
       <h1>Upcoming angular Events</h1>
       <hr />
-      <event-thumbnail [event]="event1"></event-thumbnail>
+      <event-thumbnail #thumbnail [event]="event1"></event-thumbnail>
+      <h3>{{ thumbnail.someProperty }}</h3>
+      <button class="btn btn-primary" (click)="thumbnail.LogFoo()">
+        Log me some foo
+      </button>
     </div>
   `
 })
