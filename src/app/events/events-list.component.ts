@@ -5,6 +5,9 @@ import { Component } from "@angular/core";
     <div>
       <h1>Upcoming angular Events</h1>
       <hr />
+      <div class="well">
+        <div>Hello world</div>
+      </div>
       <event-thumbnail [event]="event1"></event-thumbnail>
     </div>
   `
