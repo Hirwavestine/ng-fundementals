@@ -1,10 +1,15 @@
 import { Routes } from "@angular/router";
-import { EventsListComponent } from "./events/events-list.component";
+import {
+  EventsListComponent,
+  CreateEventComponent,
+  EventRouteActivator,
+  EventListResolver
+} from "./events/index";
+
 import { EventDetailsComponent } from "./events/event-details/event-details.component";
-import { CreateEventComponent } from "./events/create-event.components";
+
 import { Error404Component } from "./errors/404.component";
-import { EventRouteActivator } from "./events/event-details/event-route-activator.service";
-import { EventListResolver } from "./events/events-list-resolver.service";
+
 export const appRoutes = [
   {
     path: "events/new",
@@ -23,5 +28,6 @@ export const appRoutes = [
   },
   { path: "404", component: Error404Component },
 
-  { path: "", redirectTo: "/events", pathMatch: "full" }
+  { path: "", redirectTo: "/events", pathMatch: "full" },
+  { path: "user", loadChildren: "./user/user.module#UserModule" }
 ];
