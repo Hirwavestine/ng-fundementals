@@ -22,9 +22,39 @@
     </div>
   </div>
   <hr />
-  <div class="row">
+  <div class="row" style="margin-bottom:100px">
     <div class="col-md-2">
       <h3 style="margin:0">Session</h3>
+    </div>
+    <div class="col-md-7">
+      <button
+        class="btn btn-default"
+        [class.active]="ilterBY === 'all'"
+        (click)="(filterBY === 'all')"
+      >
+        All
+      </button>
+      <button
+        class="btn btn-default"
+        [class.active]="filterBY === 'beginner'"
+        (click)="(filterBY === 'beginner')"
+      >
+        Beginner
+      </button>
+      <button
+        class="btn btn-default"
+        [class.active]="filterBY === 'intermediate'"
+        (click)="(filterBY === 'intermediate')"
+      >
+        Intermediate
+      </button>
+      <button
+        class="btn btn-default"
+        [class.active]="filterBY === 'advanced'"
+        (click)="(filterBY === 'advanced')"
+      >
+        Adavanced
+      </button>
     </div>
     <div class="col-md-2">
       <a (click)="addSession()">Add Session</a>
