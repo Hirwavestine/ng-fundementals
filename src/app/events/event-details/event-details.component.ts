@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { EventService } from "../shared/event.services";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Params } from "@angular/router";
 import { IEvent, ISession } from "../shared/index";
 //import { Session } from "inspector";
 @Component({
@@ -30,9 +30,7 @@ export class EventDetailsComponent {
     private eventService: EventService,
     private route: ActivatedRoute
   ) {}
-  ngOnInit() {
-    this.event = this.eventService.getEvent(+this.route.snapshot.params["id"]);
-  }
+
   addSession() {
     this.addMode = true;
   }
@@ -45,5 +43,11 @@ export class EventDetailsComponent {
   }
   cancelAddSession() {
     this.addMode = false;
+  }
+  ngOnInit() {
+    this.route.params.forEach((params: Params) => {
+      this.event = this.eventService.getEvent(+params["id"]);
+      this.addMode = false;
+    });
   }
 }
