@@ -10,6 +10,7 @@ import {
   EventListResolver,
   CreateSessionComponent,
   SessionListComponent,
+  UpvotedComponent,
   DurationPipe
 } from "./events/index";
 
@@ -53,6 +54,7 @@ let jQuery = window["$"];
     CollapsibleWellComponent,
     SimpleModalComponent,
     ModalTriggerDirective,
+    UpvotedComponent,
     DurationPipe
   ],
   providers: [
