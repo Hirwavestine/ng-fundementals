@@ -7,3 +7,4 @@ export * from "./events-list.component";
 export * from "./shared/index";
 export * from "./event-details/index";
 export * from "../events/event-details/create-session.component";
+export * from "./location-validator.directive";
